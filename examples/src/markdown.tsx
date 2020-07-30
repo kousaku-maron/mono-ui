@@ -50,7 +50,7 @@ const Code: React.FC<{ className: string }> = ({ children, className }) => {
     // @ts-ignore
     <Highlight {...defaultProps} theme={vsDark} code={children} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, padding: '20px', borderRadius: '3px', fontSize: '18px' }}>
+        <pre className={className} style={{ ...style, padding: '20px', borderRadius: '3px', fontSize: '18px', overflow: 'auto' }}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => {

@@ -1,4 +1,5 @@
 import React from 'react'
+import defaultTheme from './themes/defaultTheme'
 import { PossibleSizes } from './consts/size'
 
 export type ParagraphProps = {
@@ -6,9 +7,9 @@ export type ParagraphProps = {
   element?: 'p' | 'div' | 'span'
 } & React.HTMLAttributes<HTMLParagraphElement>
 
-export const Paragraph = ({ size = 'md', element = 'p', className, ...rest }: ParagraphProps) => {
+export const Paragraph = ({ size = 'md', element = 'p', ...rest }: ParagraphProps) => {
   const Element = element
-  return <Element style={{ fontSize: handleFontSize(size) }} className={className} {...rest} />
+  return <Element {...rest} style={{ fontSize: handleFontSize(size), color: defaultTheme.foregrounds.primary }} />
 }
 
 const handleFontSize = (size: PossibleSizes) => {
