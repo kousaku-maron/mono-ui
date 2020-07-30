@@ -41,7 +41,12 @@ export const ComponentArea = styled.div`
   padding: 24px;
   /* background-color: #f1f1f1; */
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  border-radius: 5px;
+`
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: 'row';
 `
 
 const sizeHandler = (size: 's' | 'm' | 'l' | 'xl' | 'xxl') => {
