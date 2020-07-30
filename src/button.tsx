@@ -43,7 +43,7 @@ export type ButtonProps = {
 } & BaseButtonProps
 
 export const Button = ({ importance = 'normal', elevation = 'low', ...rest }: ButtonProps) => {
-  return <StyledButton {...rest} elevation={elevation} data-variation={importance} />
+  return <StyledButton elevation={elevation} data-variation={importance} {...rest} />
 }
 
 const StyledButton = styled(BaseButton)<{ elevation: 'none' | 'low' | 'medium' | 'high' }>`

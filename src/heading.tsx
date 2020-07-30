@@ -17,27 +17,27 @@ export type HeaderProps = {
 } & HeadingProps
 
 export const H1: React.FC<HeaderProps> = (props) => {
-  return <StyledH1 {...props} element="h1"></StyledH1>
+  return <StyledH1 element="h1" {...props}></StyledH1>
 }
 
 export const H2: React.FC<HeaderProps> = (props) => {
-  return <StyledH2 {...props} element="h2"></StyledH2>
+  return <StyledH2 element="h2" {...props}></StyledH2>
 }
 
 export const H3: React.FC<HeaderProps> = (props) => {
-  return <StyledH3 {...props} element="h3"></StyledH3>
+  return <StyledH3 element="h3" {...props}></StyledH3>
 }
 
 export const H4: React.FC<HeaderProps> = (props) => {
-  return <StyledH4 {...props} element="h4"></StyledH4>
+  return <StyledH4 element="h4" {...props}></StyledH4>
 }
 
 export const H5: React.FC<HeaderProps> = (props) => {
-  return <StyledH5 {...props} element="h5"></StyledH5>
+  return <StyledH5 element="h5" {...props}></StyledH5>
 }
 
 export const H6: React.FC<HeaderProps> = (props) => {
-  return <StyledH6 {...props} element="h6"></StyledH6>
+  return <StyledH6 element="h6" {...props}></StyledH6>
 }
 
 const handleFontSize = (size: PossibleSizes) => {
