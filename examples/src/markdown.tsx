@@ -54,7 +54,7 @@ const Code: React.FC<{ className: string }> = ({ children, className }) => {
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => {
-                if (token.empty) {
+                if (token.empty && tokens.length - 1 !== i) {
                   return <br key={key} />
                 }
                 return <span key={key} {...getTokenProps({ token, key })} />
