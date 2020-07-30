@@ -1,25 +1,22 @@
-# @kousaku-maron/react-component-ts-temnplate
+# mono-ui
 
-コンポーネントライブラリを作成するボイラーテンプレートです。
+`React`コンポーネントライブラリです。
+**[Document](https://kousaku-maron.github.io/mono-ui/)**
 
-GitHub Packagesで公開する場合、レジストリを登録する必要があります。
 
-`.npmrc`
+
+## Installation
+
+`.npmrc`に`@kousaku-maron`を登録してください。
 
 ```
 @kousaku-maron:registry="https://npm.pkg.github.com"
 ```
 
-# インストール
-
 ```
 // with npm
-npm install @kousaku-maron/react-component-ts-temnplate
+npm install @kousaku-maron/mono-ui
 
 // with yarn
-yarn add @kousaku-maron/react-component-ts-temnplate
+yarn add @kousaku-maron/mono-ui
 ```
-
-# github-pages
-
-> https://kousaku-maron.github.io/react-component-ts-template/
