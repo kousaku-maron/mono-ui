@@ -1,7 +1,7 @@
 import React, { ReactNode, useState, useCallback, useMemo } from 'react'
 import styled from 'styled-components'
 import defaultTheme from './themes/defaultTheme'
-import { DotsLoader } from './dotsLoader'
+import { DotsLoader } from './loader'
 
 export type BaseButtonProps = {
   loader?: ReactNode
