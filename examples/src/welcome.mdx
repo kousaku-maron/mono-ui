@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Layout, { ComponentArea, Spacer } from './layout'
 import { H1, H2, H3, H4, H5, H6 } from '../../src/heading'
+import { Paragraph } from '../../src/paragraph'
 
 <H4>Heading</H4>
 
@@ -17,11 +18,11 @@ import { H1, H2, H3, H4, H5, H6 } from '../../src/heading'
 
 <Spacer size='l' />
 
-```jsx
+```tsx
 import React from 'react'
 import { H1, H2, H3, H4, H5, H6 } from '@kousaku-maron/mono-ui'
 
-const Heading = () => (
+const Component = () => (
   <React.Fragment>
     <H1>H1</H1>
     <H2>H2</H2>
@@ -32,8 +33,32 @@ const Heading = () => (
   </React.Fragment>
 )
 
-export default Heading
+export default Component
+```
 
+<Spacer size='xxl' />
+
+<H4>Paragraph</H4>
+
+<Spacer size='l' />
+
+<ComponentArea>
+  <Paragraph>Paragraph</Paragraph>
+</ComponentArea>
+
+<Spacer size='l' />
+
+```tsx
+import React from 'react'
+import { Paragraph } from '@kousaku-maron/mono-ui'
+
+const Component = () => (
+  <React.Fragment>
+    <Paragraph>Paragraph</Paragraph>
+  </React.Fragment>
+)
+
+export default Component
 ```
 
 export default ({ children }) => <Layout>{children}</Layout>
