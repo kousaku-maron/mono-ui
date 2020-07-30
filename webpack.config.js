@@ -30,6 +30,17 @@ module.exports = {
         }
       },
       {
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.mdx?$/,
+        use: ['babel-loader', '@mdx-js/loader']
+      },
+      {
         test: /\.(png|jpg|gif)$/i,
         use: [
           {

@@ -1,0 +1,39 @@
+import styled from 'styled-components'
+import Layout, { ComponentArea, Spacer } from './layout'
+import { H1, H2, H3, H4, H5, H6 } from '../../src/heading'
+
+<H4>Heading</H4>
+
+<Spacer size='l' />
+
+<ComponentArea>
+  <H1>H1</H1>
+  <H2>H2</H2>
+  <H3>H3</H3>
+  <H4>H4</H4>
+  <H5>H5</H5>
+  <H6>H6</H6>
+</ComponentArea>
+
+<Spacer size='l' />
+
+```jsx
+import React from 'react'
+import { H1, H2, H3, H4, H5, H6 } from '@kousaku-maron/mono-ui'
+
+const Heading = () => (
+  <React.Fragment>
+    <H1>H1</H1>
+    <H2>H2</H2>
+    <H3>H3</H3>
+    <H4>H4</H4>
+    <H5>H5</H5>
+    <H6>H6</H6>
+  </React.Fragment>
+)
+
+export default Heading
+
+```
+
+export default ({ children }) => <Layout>{children}</Layout>

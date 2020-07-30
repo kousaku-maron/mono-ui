@@ -1,8 +1,14 @@
+import './styles/reset.css'
 import React from 'react'
-import Hello from '../../src/hello'
+import Markdown from './markdown'
+import Welcome from './welcome.mdx'
 
 const App = () => {
-  return <Hello />
+  return (
+    <Markdown>
+      <Welcome />
+    </Markdown>
+  )
 }
 
 export default App

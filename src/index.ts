@@ -1,3 +1,1 @@
-import Hello from './hello'
-
-export { Hello }
+export * from './heading'
