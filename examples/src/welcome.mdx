@@ -6,6 +6,7 @@ import { Button } from '../../src/button'
 import { Link } from '../../src/link'
 import { Image } from '../../src/image'
 import { Card } from '../../src/card'
+import { Separator } from '../../src/separator'
 import { onClickButton } from './actions/button'
 
 <H4>Heading</H4>
@@ -179,6 +180,30 @@ import { onClickButton } from './actions/button'
 <Card style={{ width: '100px', height: '100px' }} roundness='default' />
 <Card style={{ width: '100px', height: '100px' }} roundness='medium' />
 <Card style={{ width: '100px', height: '100px' }} roundness='circle' />
+```
+
+<HorizontalSpacer size='xxl' />
+
+<H4>Separator</H4>
+
+<HorizontalSpacer size='l' />
+
+<ComponentArea>
+  <H6>hello</H6>
+  <Separator layout='horizontal' />
+  <HorizontalSpacer size='m' />
+  <div style={{ display: 'flex', height: '100px' }}>
+    <Paragraph>world</Paragraph>
+    <VerticalSpacer size='m' />
+    <Separator layout='vertical' />
+  </div>
+</ComponentArea>
+
+<HorizontalSpacer size='l' />
+
+```tsx
+<Separator layout='horizontal' />
+<Separator layout='vertical' />
 ```
 
 export default ({ children }) => <Layout>{children}</Layout>
