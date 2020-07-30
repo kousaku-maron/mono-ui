@@ -1,3 +1,2 @@
-import Hello from './hello';
-export { Hello };
+export * from './heading';
 //# sourceMappingURL=index.d.ts.map
