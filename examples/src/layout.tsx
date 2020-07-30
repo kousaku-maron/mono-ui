@@ -58,9 +58,9 @@ const sizeHandler = (size: 's' | 'm' | 'l' | 'xl' | 'xxl') => {
     case 'l':
       return '20px'
     case 'xl':
-      return '30px'
-    case 'xxl':
       return '40px'
+    case 'xxl':
+      return '50px'
   }
 }
 
