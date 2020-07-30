@@ -1,10 +1,11 @@
 import styled from 'styled-components'
-import Layout, { ComponentArea, HorizontalSpacer, VerticalSpacer } from './layout'
+import Layout, { ComponentArea, Row, HorizontalSpacer, VerticalSpacer } from './layout'
 import { H1, H2, H3, H4, H5, H6 } from '../../src/heading'
 import { Paragraph } from '../../src/paragraph'
 import { Button } from '../../src/button'
 import { Link } from '../../src/link'
 import { Image } from '../../src/image'
+import { Card } from '../../src/card'
 import { onClickButton } from './actions/button'
 
 <H4>Heading</H4>
@@ -140,6 +141,44 @@ import { onClickButton } from './actions/button'
 
 ```tsx
 <Image alt='cat' src='https://homepages.cae.wisc.edu/~ece533/images/cat.png' />
+```
+
+<HorizontalSpacer size='xxl' />
+
+<H4>Card</H4>
+
+<HorizontalSpacer size='l' />
+
+<ComponentArea>  
+  <Row>
+    <Card style={{ width: '100px', height: '100px' }} elevation='low' />
+    <VerticalSpacer size='m' />
+    <Card style={{ width: '100px', height: '100px' }} elevation='medium' />
+    <VerticalSpacer size='m' />
+    <Card style={{ width: '100px', height: '100px' }} elevation='high' />
+  </Row>
+  <HorizontalSpacer size='m' />
+  <Row>
+    <Card style={{ width: '100px', height: '100px' }} roundness='sharp' />
+    <VerticalSpacer size='m' />
+    <Card style={{ width: '100px', height: '100px' }} roundness='default' />
+    <VerticalSpacer size='m' />
+    <Card style={{ width: '100px', height: '100px' }} roundness='medium' />
+    <VerticalSpacer size='m' />
+    <Card style={{ width: '100px', height: '100px' }} roundness='circle' />
+  </Row>
+</ComponentArea>
+
+<HorizontalSpacer size='l' />
+
+```tsx
+<Card style={{ width: '100px', height: '100px' }} elevation='low' />
+<Card style={{ width: '100px', height: '100px' }} elevation='medium' />
+<Card style={{ width: '100px', height: '100px' }} elevation='high' />
+<Card style={{ width: '100px', height: '100px' }} roundness='sharp' />
+<Card style={{ width: '100px', height: '100px' }} roundness='default' />
+<Card style={{ width: '100px', height: '100px' }} roundness='medium' />
+<Card style={{ width: '100px', height: '100px' }} roundness='circle' />
 ```
 
 export default ({ children }) => <Layout>{children}</Layout>
