@@ -1,9 +1,9 @@
 import React from 'react';
+import { PossibleSizes } from './consts/size';
 export declare type HeadingProps = {
     element?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 } & React.HTMLAttributes<HTMLHeadingElement>;
 export declare const Heading: ({ element, ...rest }: HeadingProps) => JSX.Element;
-export declare type PossibleSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 export declare type HeaderProps = {
     size?: PossibleSizes;
 } & HeadingProps;
