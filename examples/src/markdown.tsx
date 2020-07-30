@@ -53,9 +53,12 @@ const Code: React.FC<{ className: string }> = ({ children, className }) => {
         <pre className={className} style={{ ...style, padding: '20px', borderRadius: '3px', fontSize: '18px' }}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token, key })} />
-              ))}
+              {line.map((token, key) => {
+                if (token.empty) {
+                  return <br key={key} />
+                }
+                return <span key={key} {...getTokenProps({ token, key })} />
+              })}
             </div>
           ))}
         </pre>
