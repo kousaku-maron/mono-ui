@@ -15,7 +15,6 @@ const Root = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   background-color: #f8f8f8;
   color: #202020;
 `
@@ -45,7 +44,7 @@ export const ComponentArea = styled.div`
   border-radius: 4px;
 `
 
-const sizeHandler = (size: 's' | 'm' | 'l') => {
+const sizeHandler = (size: 's' | 'm' | 'l' | 'xl' | 'xxl') => {
   switch (size) {
     case 's':
       return '12px'
@@ -53,10 +52,14 @@ const sizeHandler = (size: 's' | 'm' | 'l') => {
       return '18px'
     case 'l':
       return '20px'
+    case 'xl':
+      return '30px'
+    case 'xxl':
+      return '40px'
   }
 }
 
-export const Spacer = styled.div<{ size?: 's' | 'm' | 'l' }>`
+export const Spacer = styled.div<{ size?: 's' | 'm' | 'l' | 'xl' | 'xxl' }>`
   height: ${(props) => sizeHandler(props.size ?? 'm')};
 `
 
