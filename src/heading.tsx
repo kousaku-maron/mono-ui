@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { PossibleSizes } from './consts/size'
 
 export type HeadingProps = {
   element?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
@@ -9,8 +10,6 @@ export const Heading = ({ element = 'h1', ...rest }: HeadingProps) => {
   const Element = element
   return <Element {...rest} />
 }
-
-export type PossibleSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 
 export type HeaderProps = {
   size?: PossibleSizes
