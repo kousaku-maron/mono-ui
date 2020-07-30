@@ -1,7 +1,6 @@
 import './styles/reset.css'
 import React from 'react'
 import { render } from 'react-dom'
-// import App from './app'
-import Test from './test'
+import App from './App'
 
-render(<Test />, document.getElementById('root'))
+render(<App />, document.getElementById('root'))
