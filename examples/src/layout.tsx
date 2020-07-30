@@ -32,7 +32,7 @@ const Header = styled.div`
 `
 
 const Container = styled.div`
-  max-width: 60rem;
+  width: 60rem;
   height: 100%;
   padding: 24px;
 `
@@ -59,8 +59,13 @@ const sizeHandler = (size: 's' | 'm' | 'l' | 'xl' | 'xxl') => {
   }
 }
 
-export const Spacer = styled.div<{ size?: 's' | 'm' | 'l' | 'xl' | 'xxl' }>`
+export const HorizontalSpacer = styled.div<{ size?: 's' | 'm' | 'l' | 'xl' | 'xxl' }>`
   height: ${(props) => sizeHandler(props.size ?? 'm')};
+`
+
+export const VerticalSpacer = styled.div<{ size?: 's' | 'm' | 'l' | 'xl' | 'xxl' }>`
+  display: inline-block;
+  width: ${(props) => sizeHandler(props.size ?? 'm')};
 `
 
 export default Layout
