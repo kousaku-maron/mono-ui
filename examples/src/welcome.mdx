@@ -3,6 +3,7 @@ import Layout, { ComponentArea, HorizontalSpacer, VerticalSpacer } from './layou
 import { H1, H2, H3, H4, H5, H6 } from '../../src/heading'
 import { Paragraph } from '../../src/paragraph'
 import { Button } from '../../src/button'
+import { Link } from '../../src/link'
 import { onClickButton } from './actions/button'
 
 <H4>Heading</H4>
@@ -106,6 +107,22 @@ import { onClickButton } from './actions/button'
   onClick={onClickButton}>
   Muted
 </Button>
+```
+
+<HorizontalSpacer size='xxl' />
+
+<H4>Link</H4>
+
+<HorizontalSpacer size='l' />
+
+<ComponentArea>
+  <Link href="https://kousaku-maron.github.io/mono-ui/" external={true}>https://kousaku-maron.github.io/mono-ui/</Link>
+</ComponentArea>
+
+<HorizontalSpacer size='l' />
+
+```tsx
+<Link href="https://kousaku-maron.github.io/mono-ui/" external={true}>https://kousaku-maron.github.io/mono-ui/</Link>
 ```
 
 export default ({ children }) => <Layout>{children}</Layout>
