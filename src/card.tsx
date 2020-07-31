@@ -17,7 +17,7 @@ export const BaseCard = ({ elevation = 'low', roundness = 'default', ...rest }: 
 const StyledBaseCard = styled.div<{ elevation: ElevationHeight; 'data-roundness': Roundness }>`
   padding: 20px;
   box-sizing: border-box;
-  background-color: ${defaultTheme.backgrounds.secondary};
+  background-color: ${(props) => props.theme.backgrounds.secondary};
 
   &[elevation='low'] {
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
@@ -47,6 +47,10 @@ const StyledBaseCard = styled.div<{ elevation: ElevationHeight; 'data-roundness'
     border-radius: 50%;
   }
 `
+
+StyledBaseCard.defaultProps = {
+  theme: defaultTheme,
+}
 
 export const Card = (props: BaseCardProps) => {
   return <BaseCard {...props} />

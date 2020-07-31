@@ -57,7 +57,8 @@ const Code: React.FC<{ className: string }> = ({ children, className }) => {
                 if (token.empty && tokens.length - 1 !== i) {
                   return <br key={key} />
                 }
-                return <span key={key} {...getTokenProps({ token, key })} />
+                const { style, ...rest } = getTokenProps({ token, key })
+                return <span key={key} {...rest} style={{ ...style, lineHeight: 1.5 }} />
               })}
             </div>
           ))}

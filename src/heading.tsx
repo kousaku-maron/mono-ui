@@ -64,41 +64,65 @@ const handleFontSize = (size: PossibleSizes) => {
 const StyledH1 = styled(Heading)<{ size?: PossibleSizes }>`
   font-size: ${(props) => handleFontSize(props.size ?? 'xl')};
   padding-bottom: 20px;
-  color: ${defaultTheme.foregrounds.primary};
+  color: ${(props) => props.theme.foregrounds.primary};
   font-weight: bold;
 `
+
+StyledH1.defaultProps = {
+  theme: defaultTheme,
+}
 
 const StyledH2 = styled(Heading)<{ size?: PossibleSizes }>`
   font-size: ${(props) => handleFontSize(props.size ?? 'lg')};
   padding-bottom: 20px;
-  color: ${defaultTheme.foregrounds.primary};
+  color: ${(props) => props.theme.foregrounds.primary};
   font-weight: bold;
 `
+
+StyledH2.defaultProps = {
+  theme: defaultTheme,
+}
 
 const StyledH3 = styled(Heading)<{ size?: PossibleSizes }>`
   font-size: ${(props) => handleFontSize(props.size ?? 'md')};
   padding-bottom: 20px;
-  color: ${defaultTheme.foregrounds.primary};
+  color: ${(props) => props.theme.foregrounds.primary};
   font-weight: bold;
 `
+
+StyledH3.defaultProps = {
+  theme: defaultTheme,
+}
 
 const StyledH4 = styled(Heading)<{ size?: PossibleSizes }>`
   font-size: ${(props) => handleFontSize(props.size ?? 'sm')};
   padding-bottom: 8px;
-  color: ${defaultTheme.foregrounds.primary};
+  color: ${(props) => props.theme.foregrounds.primary};
   font-weight: bold;
 `
+
+StyledH4.defaultProps = {
+  theme: defaultTheme,
+}
 
 const StyledH5 = styled(Heading)<{ size?: PossibleSizes }>`
   font-size: ${(props) => handleFontSize(props.size ?? 'xs')};
   padding-bottom: 8px;
-  color: ${defaultTheme.foregrounds.primary};
+  color: ${(props) => props.theme.foregrounds.primary};
   font-weight: bold;
 `
+
+StyledH5.defaultProps = {
+  theme: defaultTheme,
+}
 
 const StyledH6 = styled(Heading)<{ size?: PossibleSizes }>`
   font-size: ${(props) => handleFontSize(props.size ?? 'xxs')};
   padding-bottom: 8px;
-  color: ${defaultTheme.foregrounds.primary};
+  color: ${(props) => props.theme.foregrounds.primary};
   font-weight: bold;
 `
+
+StyledH6.defaultProps = {
+  theme: defaultTheme,
+}
