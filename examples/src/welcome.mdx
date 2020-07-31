@@ -206,4 +206,28 @@ import { onClickButton } from './actions/button'
 <Separator layout='vertical' />
 ```
 
+<HorizontalSpacer size='xxl' />
+
+<H4>Theme</H4>
+
+<HorizontalSpacer size='l' />
+
+```tsx
+const theme = {
+  tints: {
+    primary: {
+      light: '#18cdd2',
+      main: '#18cdd2',
+      dark: '#18cdd2',
+    }
+  }
+}
+
+const App: React.FC = ({ children }) => {
+  <ThemeProvider theme={theme}>
+    {children}
+  </ThemeProvider>
+}
+```
+
 export default ({ children }) => <Layout>{children}</Layout>
