@@ -62,5 +62,6 @@ declare const theme: {
         gray6: string;
     };
 };
+export declare type Theme = typeof theme;
 export default theme;
 //# sourceMappingURL=defaultTheme.d.ts.map
