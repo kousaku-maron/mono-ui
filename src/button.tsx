@@ -62,37 +62,37 @@ const StyledButton = styled(BaseButton)<{ elevation: 'none' | 'low' | 'medium' |
   }
 
   &[data-variation='normal'] {
-    border: 1px solid ${defaultTheme.backgrounds.tertiary};
-    background-color: ${defaultTheme.backgrounds.tertiary};
-    color: ${defaultTheme.tints.primary.main};
+    border: ${(props) => `1px solid ${props.theme.backgrounds.tertiary}`};
+    background-color: ${(props) => props.theme.backgrounds.tertiary};
+    color: ${(props) => props.theme.tints.primary.main};
 
     &:hover:not(:disabled) {
-      border: 1px solid ${defaultTheme.backgrounds.tertiary};
-      background-color: ${defaultTheme.backgrounds.tertiary};
-      color: ${defaultTheme.tints.primary.light};
+      border: ${(props) => `1px solid ${props.theme.backgrounds.tertiary}`};
+      background-color: ${(props) => props.theme.backgrounds.tertiary};
+      color: ${(props) => props.theme.tints.primary.light};
     }
   }
 
   &[data-variation='ghost'] {
-    border: 1px solid ${defaultTheme.tints.primary.main};
-    background-color: ${defaultTheme.backgrounds.tertiary};
-    color: ${defaultTheme.tints.primary.main};
+    border: ${(props) => `1px solid ${props.theme.tints.primary.main}`};
+    background-color: ${(props) => props.theme.backgrounds.tertiary};
+    color: ${(props) => props.theme.tints.primary.main};
 
     &:hover:not(:disabled) {
-      border: 1px solid ${defaultTheme.tints.primary.light};
-      background-color: ${defaultTheme.backgrounds.tertiary};
-      color: ${defaultTheme.tints.primary.light};
+      border: ${(props) => `1px solid ${props.theme.tints.primary.light}`};
+      background-color: ${(props) => props.theme.backgrounds.tertiary};
+      color: ${(props) => props.theme.tints.primary.light};
     }
   }
 
   &[data-variation='cta'] {
-    border: 1px solid ${defaultTheme.tints.primary.main};
-    background-color: ${defaultTheme.tints.primary.main};
-    color: ${defaultTheme.foregrounds.onTintPrimary};
+    border: ${(props) => `1px solid ${props.theme.tints.primary.main}`};
+    background-color: ${(props) => props.theme.tints.primary.main};
+    color: ${(props) => props.theme.foregrounds.onTintPrimary};
 
     &:hover:not(:disabled) {
-      border: 1px solid ${defaultTheme.tints.primary.light};
-      background-color: ${defaultTheme.tints.primary.light};
+      border: ${(props) => `1px solid ${props.theme.tints.primary.light}`};
+      background-color: ${(props) => props.theme.tints.primary.light};
     }
   }
 
@@ -123,3 +123,7 @@ const StyledButton = styled(BaseButton)<{ elevation: 'none' | 'low' | 'medium' |
     }
   }
 `
+
+StyledButton.defaultProps = {
+  theme: defaultTheme,
+}

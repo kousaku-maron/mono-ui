@@ -1,15 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
 import defaultTheme from './themes/defaultTheme'
 import { PossibleSizes } from './consts/size'
 
-export type ParagraphProps = {
+export type BaseParagraphProps = {
   size?: PossibleSizes
   element?: 'p' | 'div' | 'span'
 } & React.HTMLAttributes<HTMLParagraphElement>
 
-export const Paragraph = ({ size = 'md', element = 'p', ...rest }: ParagraphProps) => {
+export const BaseParagraph = ({ size = 'md', element = 'p', ...rest }: BaseParagraphProps) => {
   const Element = element
-  return <Element {...rest} style={{ fontSize: handleFontSize(size), color: defaultTheme.foregrounds.primary }} />
+  return <Element {...rest} style={{ fontSize: handleFontSize(size) }} />
+}
+
+export const Paragraph = styled(BaseParagraph)`
+  color: ${(props) => props.theme.foregrounds.primary};
+`
+
+Paragraph.defaultProps = {
+  theme: defaultTheme,
 }
 
 const handleFontSize = (size: PossibleSizes) => {

@@ -1,3 +1,6 @@
+export { default as defaultTheme, Theme } from './themes/defaultTheme'
+export { default as ThemeProvider } from './themes/themeProvider'
+
 export * from './heading'
 export * from './paragraph'
 export * from './button'

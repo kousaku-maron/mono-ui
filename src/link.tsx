@@ -22,9 +22,13 @@ export const BaseLink = ({ external, children, ...rest }: BaseLinkProps) => {
 }
 
 export const Link = styled(BaseLink)`
-  color: ${defaultTheme.tints.primary.main};
+  color: ${(props) => props.theme.tints.primary.main};
 
   &:hover {
-    color: ${defaultTheme.tints.primary.light};
+    color: ${(props) => props.theme.tints.primary.light};
   }
 `
+
+Link.defaultProps = {
+  theme: defaultTheme,
+}

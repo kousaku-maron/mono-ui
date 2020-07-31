@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./types",
+    "paths": {
+      "mdx": ["mdx.d.ts"],
+    },
     "target": "es5",
     "lib": ["ES2018", "dom"],
     "moduleResolution": "node",
@@ -13,6 +16,6 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
   }
 }

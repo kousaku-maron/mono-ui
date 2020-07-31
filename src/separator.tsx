@@ -15,14 +15,18 @@ const StyledBaseSeparator = styled.div<{ 'data-layout': 'vertical' | 'horizontal
     width: 1px;
     height: 100%;
     border-bottom-width: 0px;
-    border-right: 1px solid ${defaultTheme.foregrounds.separator};
+    border-right: ${(props) => `1px solid ${props.theme.foregrounds.separator}`};
   }
 
   &[data-layout='horizontal'] {
-    border-bottom: 1px solid ${defaultTheme.foregrounds.separator};
+    border-bottom: ${(props) => `1px solid ${props.theme.foregrounds.separator}`};
     width: 100%;
   }
 `
+
+StyledBaseSeparator.defaultProps = {
+  theme: defaultTheme,
+}
 
 export const Separator = (props: BaseSeparatorProps) => {
   return <BaseSeparator {...props} />
